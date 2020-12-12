@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AGE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+	.tem1
+	{
+background-image: url(https://cdn.pixabay.com/photo/2019/09/21/18/58/dog-4494554_960_720.jpg);
+height: 658px;
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+	}
+	#sec
+	{
+		height:auto;
+		width: 100%;
+	}
+	h1
+	{
+		text-align: center;
+		font-size: 60px;
+	
+		padding-top: 5%;
+		font-family: 'Nerko One', cursive;
+	}
+	
+	</style>
+
+<body>
+	<section id="sec">
+	<div class="container-fluid tem1">
+		<div>
+		<h1>Human/Dog Age Converter</h1>
+		<input type="number" value="age" placeholder="Input Your Age" id="hum" style="margin-left: 400px; margin-top: 20px; font-family: 'Nerko One', cursive;"><br>
+		<input type="number" value="age" placeholder="Years" id="dog" readonly="" style="margin-left: 400px; margin-top: 20px;font-family: 'Nerko One', cursive;"><input type="number" value="age" placeholder="Months" id="dog1" readonly=""  style="margin-left: 50px; margin-top: 20px; font-family: 'Nerko One', cursive;">
+		 </td></tr>
+		</div>
+		<div>
+		<button type="button" class="btn btn-outline-info" onclick="con();" style="margin-left: 29%;margin-top: 5%;">CONVERT</button>
+		<button class="btn btn-outline-warning" onclick="rem()" style="margin-left: 6%;margin-top: 5%;">RESET</button>
+		</div>
+	</div>
+</section>
+<script>
+function con()
+{
+var x=document.getElementById("hum").value;
+if(x<=21)
+{
+c=x/10.5;
+d=parseInt(c);
+e=c-d;
+f=e*12;
+document.getElementById("dog").value=d,"Years";
+document.getElementById("dog1").value=Math.floor(f),"Months";
+
+}
+else
+{
+	 a=x-21;
+	b=a/4;
+	b=b+2;
+	p=parseInt(b);
+	q=b-p;
+	r=q*12;
+document.getElementById("dog").value=p;
+document.getElementById("dog1").value=Math.floor(r),"Months";
+
+// document.getElementById("dog").value=r;
+}
+}
+function rem()
+{
+	document.getElementById("hum").value="";
+		document.getElementById("dog").value="";
+			document.getElementById("dog1").value="";
+}
+	</script>
+</body>
+</html>
